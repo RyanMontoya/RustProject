@@ -19,7 +19,8 @@ fn main() {
     println!("Hello, world!");  
    
     let temp : String = read(); 
-    let query = Parameters { query_trait: temp};
+    let query = Parameters { query_trait: temp}; 
+    println!("howdy, {}", query.query_trait);
 } 
 
 
