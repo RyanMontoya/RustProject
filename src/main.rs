@@ -1,5 +1,5 @@
-
-
+use clap::Parser;
+/* 
 struct Parameters { 
     query_trait : String,  
 }
@@ -21,11 +21,25 @@ enum TraitVariants {
     TraitA(String), 
     TraitB(String, String, String),
 }
+    */ 
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {  
+    /// Trait requested
+    tag_trait: String, 
+    /// group requested
+    group: String,
+    
+}
 
+//using clap for to learn more about rust cli.
 fn main() { 
  
-
-
+    let args = Args::parse();   
+    
+   println!("good choice {}", args.tag_trait); 
+   
+    /* 
     println!("Hello, world!");  
    
     let temp : String = read(); 
@@ -37,9 +51,13 @@ fn main() {
     //let b = TraitVariants::TraitB("concentration","move",);
     
    // println!("multi trait enum pass {}",b);
+    */  
+
+
+
 
 } 
-
+ /* 
 fn read() -> String {   
     let mut line = String::new();
     println!("Enter query trait:");
@@ -60,5 +78,5 @@ fn boxlearn() {
 fn enumlearn() { 
 
 }
-
+*/
 
