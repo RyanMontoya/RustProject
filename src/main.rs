@@ -1,4 +1,5 @@
-use clap::Parser;
+use clap::Parser; 
+use yew ::prelude::*; 
 /* 
 struct Parameters { 
     query_trait : String,  
@@ -30,14 +31,15 @@ struct Args {
     /// group requested
     group: String,
     
-}
+} 
 
 //using clap for to learn more about rust cli.
 fn main() { 
- 
-    let args = Args::parse();   
+    // might utilize this  for an alternate input format
+   // let args = Args::parse();   
     
-   println!("good choice {}", args.tag_trait); 
+   //println!("good choice {}", args.tag_trait);  
+
    
     /* 
     println!("Hello, world!");  
@@ -53,10 +55,17 @@ fn main() {
    // println!("multi trait enum pass {}",b);
     */  
 
+yew ::start_app::<App>();
 
+}  
 
+#[function_component(App)]
+fn app() -> Html { 
+    html! {  
+        <h1>{"howdy there!"}</h1> 
+    }
+}
 
-} 
  /* 
 fn read() -> String {   
     let mut line = String::new();
