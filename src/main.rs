@@ -1,5 +1,5 @@
 use clap::Parser; 
-use yew ::prelude::*; 
+//use yew ::prelude::*; 
 /* 
 struct Parameters { 
     query_trait : String,  
@@ -29,17 +29,19 @@ struct Args {
     /// Trait requested
     tag_trait: String, 
     /// group requested
-    group: String,
+    group: String, 
+
+    infinite_list: Vec<String>
     
 } 
 
 //using clap for to learn more about rust cli.
 fn main() { 
-    // might utilize this  for an alternate input format
-   // let args = Args::parse();   
-    
-   //println!("good choice {}", args.tag_trait);  
 
+    let args = Args::parse();   
+    
+   println!("good choice {}", args.tag_trait);  
+   println!("good choice 2 {}", args.infinite_list[0]);
    
     /* 
     println!("Hello, world!");  
@@ -55,16 +57,16 @@ fn main() {
    // println!("multi trait enum pass {}",b);
     */  
 
-yew ::start_app::<App>();
+//yew ::start_app::<App>();
 
 }  
-
+/* 
 #[function_component(App)]
 fn app() -> Html { 
     html! {  
         <h1>{"howdy there!"}</h1> 
     }
-}
+} */
 
  /* 
 fn read() -> String {   
