@@ -7,4 +7,6 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.2.1", features = ["derive"] }
-yew = "^0.19"
+yew = "^0.19" 
+bevy = "0.10"  
+wasm-bindgen = "0.2.84"
