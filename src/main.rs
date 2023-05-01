@@ -1,5 +1,8 @@
 use clap::Parser; 
 use yew::prelude::*; 
+//use bevy::prelude::*;  
+//use wasm_bindgen::prelude::*;
+//use wasm_bindgen::prelude::*;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -12,6 +15,8 @@ struct Args {
     infinite_list: Vec<String>
     
 }   
+
+
 #[function_component(App)]
 fn app() -> Html { 
     html! { 
