@@ -14,14 +14,22 @@ struct Args {
 
     infinite_list: Vec<String>
     
-}   
+}    
+
+/* 
+struct test { 
+    test:String
+} */
 
 
 #[function_component(App)]
-fn app() -> Html { 
+fn app() -> Html {  
+   // let test = test {test : String::from("howdy")}; 
+    let test = String::from("hi");
     html! { 
         <div>  
-        <p>{"stuff"}</p>
+        <p>{"stuff"}</p> 
+        {test} 
         </div>
     }
 }
