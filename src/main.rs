@@ -29,7 +29,6 @@ fn app() -> Html {
     html! { 
         <div>  
         <p>{"stuff"}</p> 
-        {test} 
         </div>
     }
 }
